@@ -9,7 +9,7 @@ Part 1
 -Navigator: Sneha Nayak
 ## Overview
 
-This project is the implementation of PID comtroller for a particular instant. Here, we have assumed that change in time(dt) = 1.
+This project is the implementation of PID controller for a particular instant. Here, we have assumed that change in time(dt) = 1.
 
 
 ## Standard install via command-line
