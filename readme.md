@@ -5,13 +5,12 @@
 ## Author
 Part 1
 -Driver: Kushagra Agrawal
+
 -Navigator: Sneha Nayak
 ## Overview
 
-Simple starter C++ project with:
+This project is the implementation of PID comtroller for a particular instant. Here, we have assumed that change in time(dt) = 1.
 
-- cmake
-- googletest
 
 ## Standard install via command-line
 ```
