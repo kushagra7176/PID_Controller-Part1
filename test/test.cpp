@@ -36,7 +36,7 @@ TEST(CheckGainValues, should_pass) {
 TEST(FormulaCheck, should_pass) {
   PID::PidController PidTest;
   PidTest.SetGainValues(1, 2, 3);
-  double ErrorCheck = PidTest.ComputeError(4, 6, 1);
-  // Expect a return value of 10.0 for the given input values.
-  ASSERT_EQ(10.0, ErrorCheck);
+  double ErrorCheck = PidTest.ComputeError(6, 4, 1);
+  // Expect a return value of 9.0 for the given input values.
+  ASSERT_EQ(9.0, ErrorCheck);
 }
