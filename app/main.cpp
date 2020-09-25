@@ -1,8 +1,26 @@
-#include <iostream>
-#include <lib.hpp>
+/**
+ * @file main.h
+ * @brief This file contains the main function.
+ * @Created on: Sep 23, 2020
+ * @cpoyright 2020
+ * @copyright owner : Kushagra Agrawal, Sneha Nayak
+ */
+#include<iostream>
+#include<string>
+#include<vector>
 
-int main()
-{
-    dummy();
-    return 0;
+#include "../include/PidController.h"
+
+/**
+ * @fn main
+ * @brief Main function
+ * @detail Compute the Control error and the current velocity.
+ * @return Program execution status
+ */
+int main() {
+  PID::PidController Pid;
+  std::vector<double> gains = Pid.GainValues(1, 2, 3);
+  Pid.ComputeError(1, 2, 3);
+  return 0;
 }
+
