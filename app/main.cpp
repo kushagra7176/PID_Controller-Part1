@@ -19,7 +19,7 @@
  */
 int main() {
   PID::PidController Pid;
-  std::vector<double> gains = Pid.GainValues(1, 2, 3);
+  Pid.SetGainValues(1, 2, 3);
   Pid.ComputeError(1, 2, 3);
   return 0;
 }

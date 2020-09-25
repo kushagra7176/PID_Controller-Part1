@@ -10,20 +10,19 @@
 #include "../include/PidController.h"
 
 /**
- * @brief Test for GainValues() method of the PidController class.
+ * @brief Test for GetGainValues() method of the PidController class.
  * It checks whether the gain values set by the user are being correctly returned by the method or not.
  */
 
 TEST(CheckGainValues, should_pass) {
   PID::PidController PidTest;
-  std::vector<double> values;
-  values = PidTest.GainValues(1, 2, 3);
+  PidTest.SetGainValues(1, 2, 3);
   std::vector<double> CheckValues = { 1.0, 2.0, 3.0 };
   int i = 0;
   /** This range based loop iterates over the values returned by
-   * GainValues() method and they should match the CheckValues.
+   * GetGainValues() method and they should match the CheckValues.
    */
-  for (auto &value : values) {
+  for (auto &value : PidTest.GetGainValues()) {
     ASSERT_EQ(value, CheckValues[i]);
     i++;
   }
@@ -36,9 +35,8 @@ TEST(CheckGainValues, should_pass) {
 
 TEST(FormulaCheck, should_pass) {
   PID::PidController PidTest;
-  PidTest.GainValues(1, 2, 3);
+  PidTest.SetGainValues(1, 2, 3);
   double ErrorCheck = PidTest.ComputeError(4, 6, 1);
   // Expect a return value of 10.0 for the given input values.
   ASSERT_EQ(10.0, ErrorCheck);
 }
-

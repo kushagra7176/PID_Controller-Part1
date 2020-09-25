@@ -29,13 +29,18 @@ class PidController {
   PidController();
 
   /**
-   * @brief This function sets the gain values for the PID controller and returns the gain values set by the user.
+   * @brief This function sets the gain values for the PID controller.
    * @param kp This is the proportional controller gain.
    * @param ki This is the integral controller gain.
    * @param kd This is the differential controller gain.
-   * @return A double vector which contains the gain values set by the user.
    */
-  std::vector<double> GainValues(double kp, double ki, double kd);
+  void SetGainValues(double kp, double ki, double kd);
+
+  /**
+   * @brief This function gets the gain values for the PID controller.
+   * @return It returns a double vector which has the gain values.
+   */
+  std::vector<double> GetGainValues();
 
   /**
    * @brief This function implements the error formula for the PID controller
