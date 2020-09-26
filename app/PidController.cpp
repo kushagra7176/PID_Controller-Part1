@@ -48,8 +48,15 @@ std::vector<double> PID::PidController::GetGainValues() {
 double PID::PidController::ComputeError(double TargetVelocity,
                                         double InputVelocity,
                                         double PreviousError) {
-  std::cout << "Implement Compute Error method.";
-  return 0;
+  double TotalE;
+
+  ControlError = TargetVelocity - InputVelocity;
+  CumulativeError += ControlError;
+
+
+  TotalE = ((Kp*ControlError) + (Kd * (ControlError - PreviousError)) + (Ki * CumulativeError));
+
+  return TotalE;
 }
 PID::PidController::~PidController() {
 }
