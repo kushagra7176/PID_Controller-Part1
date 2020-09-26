@@ -55,7 +55,8 @@ double PID::PidController::ComputeError(double TargetVelocity,
   CumulativeError += ControlError;
 
 
-  TotalE = ((Kp*ControlError) + (Kd * (ControlError - PreviousError) / dt) + (Ki * CumulativeError * dt));
+  TotalE = ((Kp*ControlError) + (Kd * (ControlError - PreviousError) / dt)
+                                            + (Ki * CumulativeError * dt));
 
   return TotalE;
 }
