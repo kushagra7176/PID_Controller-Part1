@@ -20,7 +20,7 @@
 int main() {
   PID::PidController Pid;
   Pid.SetGainValues(1, 2, 3);
-  Pid.ComputeError(1, 2, 3);
+  std::cout << Pid.ComputeError(1, 2, 3) << std::endl;
   return 0;
 }
 
