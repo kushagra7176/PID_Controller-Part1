@@ -37,10 +37,7 @@ script:
 
 after_success:
   - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*" 
-  - lcov --directory . --capture --output-file coverage.info
-  - coveralls-lcov --repo-token ${uoGDzrClGKYzTOsSpFkmRaJAqDaDDtrhD}
-
-
+  
 
 notifications:
   email: false
