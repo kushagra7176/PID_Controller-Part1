@@ -1,5 +1,6 @@
 # We need a decent ubuntu dist
 os: linux
+sudo: false
 dist: trusty
 # Modern cpp settings from
 #  http://genbattle.bitbucket.org/blog/2016/01/17/c++-travis-ci/
@@ -36,6 +37,8 @@ script:
 
 after_success:
   - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*" 
+  - lcov --directory . --capture --output-file coverage.info
+  - coveralls-lcov --repo-token ${uoGDzrClGKYzTOsSpFkmRaJAqDaDDtrhD}
 
 
 
