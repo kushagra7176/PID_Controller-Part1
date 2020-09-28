@@ -1,7 +1,6 @@
 # We need a decent ubuntu dist
-sudo: required
 dist: trusty
-
+os: linux
 # Modern cpp settings from
 #  http://genbattle.bitbucket.org/blog/2016/01/17/c++-travis-ci/
 language: cpp
@@ -34,7 +33,7 @@ script:
   - test/cpp-test
 
 after_success:
-  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*" -t uoGDzrClGKYzTOsSpFkmRaJAqDaDDtrhD
+  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*" 
 
 
 
