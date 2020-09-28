@@ -37,7 +37,6 @@ script:
 
 after_success:
   - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*" 
-  - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
 
 
 
