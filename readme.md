@@ -7,6 +7,11 @@ Part 1
 -Driver: Kushagra Agrawal
 
 -Navigator: Sneha Nayak
+
+Part 2
+-Driver: Santosh Kesani
+
+-Navigator: Arjun Srinivasan
 ## Overview
 
 This project is the implementation of PID controller for a particular instant. Here, we have assumed that change in time(dt) = 1.

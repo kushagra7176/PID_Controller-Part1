@@ -32,7 +32,7 @@ void PID::PidController::SetGainValues(double kp, double ki, double kd) {
  * @return It returns a double vector which has the gain values.
  */
 std::vector<double> PID::PidController::GetGainValues() {
-  std::vector<double> Gains;
+  std::vector<double> Gains = {Kp, Ki, Kd};
   return Gains;
 }
 /**
@@ -48,8 +48,17 @@ std::vector<double> PID::PidController::GetGainValues() {
 double PID::PidController::ComputeError(double TargetVelocity,
                                         double InputVelocity,
                                         double PreviousError) {
-  std::cout << "Implement Compute Error method.";
-  return 0;
+  double TotalE;
+  double dt = 1.0;
+
+  ControlError = TargetVelocity - InputVelocity;
+  CumulativeError += ControlError;
+
+
+  TotalE = ((Kp*ControlError) + (Kd * (ControlError - PreviousError) / dt)
+                                            + (Ki * CumulativeError * dt));
+
+  return TotalE;
 }
 PID::PidController::~PidController() {
 }
