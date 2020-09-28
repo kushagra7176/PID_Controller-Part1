@@ -32,7 +32,7 @@ void PID::PidController::SetGainValues(double kp, double ki, double kd) {
  * @return It returns a double vector which has the gain values.
  */
 std::vector<double> PID::PidController::GetGainValues() {
-  std::vector<double> Gains;
+  std::vector<double> Gains = {Kp, Ki, Kd};
   return Gains;
 }
 /**
