@@ -60,4 +60,4 @@ class PidController {
    */
   ~PidController();
 };
-}
+}  // namespace PID
