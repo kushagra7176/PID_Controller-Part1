@@ -1,6 +1,6 @@
 # PID Controller
 [![Build Status](https://travis-ci.com/kushagra7176/PID_Controller-Part1.svg?branch=master)](https://travis-ci.com/github/kushagra7176/PID_Controller-Part1)
-[![Coverage Status](https://coveralls.io/repos/github/kushagra7176/PID_Controller-Part1/badge.svg?branch=master)](https://coveralls.io/github/kushagra7176/PID_Controller-Part1?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/kushagra7176/PID_Controller-Part1/badge.png?branch=master)](https://coveralls.io/github/kushagra7176/PID_Controller-Part1?branch=master)
 ---
 ## Author
 Part 1
